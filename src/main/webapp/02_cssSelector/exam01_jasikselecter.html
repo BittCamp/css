@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!-- [ 김찬영  2023-08-3 오후 06:41:00 ] -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+h3, li {
+	color: brown;
+}
+div > div > strong { /* 자식 셀럭터 */
+	background: yellow; 
+}
+ul strong{ /* 후손 셀렉터 */
+	color: dodgerblue;
+}
+.warning{ 
+	color: red; 
+} /* 얘는 div가 넘많아서 class로 바로 변경해줘야함. */
+.main {
+	background: aliceblue;
+}
+body.main {
+	background: aliceblue;
+} /* 위에거도 가능밑에거도 가능. */
+#list{
+	background: mistyrose;
+}
+#list span {
+	color: forestgreen;
+}
+h3:first-letter { /* 가상 클래스 - 첫번째 문자를 선택 */
+	color: red;
+	font-size: 25px;
+}
+li:hover { /* 가상클래스 */
+	background: yellowgreen;
+}
+::selection{ /* 마우스로 드래그 하면 글자색은 빨강 , 바탕색은 노랑으로 변한다. */
+	color: red;
+	background: yellow;
+}
+</style>
+<body class="main">
+<h3>Web Programming</h3>
+<hr>
+<div>
+	<div> 2학기 <strong>학습 내용</strong> 입니다. </div>
+	<ul id="list">
+		<li> <span>HTML5</span> </li>
+		<li> <strong>CSS</strong> </li>
+		<li>JAVASCRIPT</li>	
+	</ul>
+	<div class="warning">60점 이하는 </div>
+</div>
+</body>
+</html>
