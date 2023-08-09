@@ -1,0 +1,38 @@
+<!DOCTYPE html><!--[ 김찬영  2023-08-7 오후 04:23:21 ]  -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+html { height: 100%; }
+body { height: 100%; margin: 0; padding: 0; }
+#map { width: 100%; height: 100%; }
+</style>
+
+</head>
+<body>
+<div id="map"></div>
+
+<script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appKey=df81d129762d87a26695ab0f16ea1160">
+</script>
+<script type="text/javascript">
+window.onload=function(){
+	var position = new daum.maps.LatLng( 37.57760202682779, 126.97690296611069);
+	var container = document.getElementById("map"); //지도를 표시할 div
+	var options = {
+			center: position,
+			level: 3, //지도의 확대 레벨
+			//draggable: false //마우드 드래그하여 확대/축소가 안된다
+	};
+	var map = new daum.maps.Map(container, options); //지도 생성
+	
+	var marker = new daum.maps.Marker({
+		position: position  //지도 중심 좌표에 마커를 생성
+	}); //마커 생성
+	
+	marker.setMap(map); //마커 표시
+}
+</script>
+</body>
+</html>
